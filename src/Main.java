@@ -11,5 +11,9 @@ public class Main {
         myLinkedList.add(12);
         myLinkedList.add(13);
         System.out.println(myLinkedList.size());
+
+        MyStack myStack=new MyStack();
+        myStack.push(12);
+        System.out.println(myStack.size());
     }
 }
