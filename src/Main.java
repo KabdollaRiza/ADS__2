@@ -1,19 +1,41 @@
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        MyArrayList arrayList =  new MyArrayList();
-        MyLinkedList myLinkedList=new MyLinkedList<>();
+        // MyArrayList test
+        MyArrayList<Integer> arrayList = new MyArrayList();
+        arrayList.add(11);
+        arrayList.add(13);
 
-        arrayList.add(11.5);
-        System.out.println(arrayList.size());
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println(arrayList.get(i));
+        }
 
-        myLinkedList.add(12);
+        // MyLinkedList test
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList();
+
+        myLinkedList.add(11);
         myLinkedList.add(13);
-        System.out.println(myLinkedList.size());
+        myLinkedList.add(15);
+        System.out.println(myLinkedList.get(1));
 
-        MyStack myStack=new MyStack();
-        myStack.push(12);
-        System.out.println(myStack.size());
+        // MyStack with MyArrayList test
+        MyStack myStack = new MyStack();
+        myStack.push(1);
+        myStack.push(3);
+        myStack.push(5);
+        System.out.println(myStack.peek());
+
+        // MyQueue with LinkedList test
+        MyQueue<Integer> myQueue=new MyQueue<>();
+        myQueue.enqueue(5);
+        myQueue.enqueue(7);
+        myQueue.enqueue(9);
+        System.out.println(myQueue.peek());
+
+        //MyMinHeap with MyArrayLIst
+        MyMinHeap<Integer> myMinHeap=new MyMinHeap<>();
+        myMinHeap.insert(12);
+        myMinHeap.insert(15);
+        myMinHeap.insert(16);
+        System.out.println(myMinHeap.getMin());
     }
 }
